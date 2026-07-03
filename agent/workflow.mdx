@@ -1,0 +1,31 @@
+---
+title: "The workflow editor"
+icon: "diagram-project"
+description: "Design the conversation your agent runs — stages, actions, and outcomes — visually or by describing it to the AI co-pilot."
+---
+
+The workflow is your agent's playbook for a call: greet, qualify, collect details, take action, wrap up. You design it on a visual canvas — or skip the canvas and describe what you want in plain English.
+
+## The three building blocks
+
+- **Stages** — conversation goals the agent works through naturally: *"Find out why they're calling,"* *"Collect name, address, and preferred time."* You define the goal; the agent handles the actual back-and-forth.
+- **Actions** — deterministic steps between stages: check business hours, read keypad input, transfer the call, send a text, call your own systems over HTTP, or branch on a condition. Each action's possible results become branches in the flow.
+- **Endings** — how calls conclude, each labeled with an outcome you define (booked, qualified, not interested, callback requested). Outcomes become the labels on calls in your Inbox, so reporting matches how you think about your business.
+
+## Global triggers
+
+Some things should work from *anywhere* in the conversation — "if the caller asks for a human at any point, transfer" or "if they mention canceling, jump to the retention step." Mark a stage as **global** with a plain-language trigger and the agent can jump to it from any point in the call.
+
+## The AI co-pilot
+
+The chat panel in the editor knows your whole workflow. Describe what you want — *"after they pick a time, text them a confirmation and end the call as booked"* — and it builds or rewires the steps for you. It's the fastest way to make structural changes; fine-tune the details on the canvas afterwards.
+
+Starting fresh? The empty canvas offers templates for common setups (receptionist, lead intake, booking) you can adapt instead of starting from zero.
+
+## Saving vs. publishing
+
+Workflow edits save to your **draft** (press <kbd>Cmd</kbd>+<kbd>S</kbd> or use the save bar) and are picked up by test calls immediately. Live callers only get changes when you **Publish** the agent — same model as [behavior](/agent/behavior#drafts-publishing-and-testing).
+
+<Tip>
+  Keep it simpler than you think you need. Two or three stages with a clear goal each beats ten hyper-specific ones — the agent is good at conversation; the workflow is there for structure and actions, not to script every sentence.
+</Tip>

@@ -1,53 +1,110 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Mintlify Starter Kit",
+  "name": "Vocal",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#080808",
+    "light": "#e5ff2d",
+    "dark": "#e5ff2d"
   },
   "favicon": "/favicon.svg",
-  "navigation": {
-    "pages": [
-      {
-        "group": "Getting Started",
-        "pages": [
-          "index",
-          "quickstart"
-        ]
-      }
-    ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
-        }
-      ]
-    }
-  },
   "logo": {
     "light": "/logo/light.svg",
     "dark": "/logo/dark.svg"
   },
+  "fonts": {
+    "family": "Geist"
+  },
+  "styling": {
+    "eyebrows": "breadcrumbs"
+  },
+  "navigation": {
+    "pages": [
+      {
+        "group": "Get started",
+        "pages": [
+          "index",
+          "getting-started/quickstart",
+          "getting-started/how-vocal-works"
+        ]
+      },
+      {
+        "group": "Phone numbers",
+        "pages": [
+          "numbers/get-a-number",
+          "numbers/porting",
+          "numbers/sms-registration"
+        ]
+      },
+      {
+        "group": "Your AI agent",
+        "pages": [
+          "agent/behavior",
+          "agent/voice",
+          "agent/knowledge",
+          "agent/workflow"
+        ]
+      },
+      {
+        "group": "Calls & routing",
+        "pages": [
+          "calls/call-flows",
+          "calls/ring-groups"
+        ]
+      },
+      {
+        "group": "Messaging",
+        "pages": [
+          "messaging/texting"
+        ]
+      },
+      {
+        "group": "Contacts & campaigns",
+        "pages": [
+          "campaigns/outbound"
+        ]
+      },
+      {
+        "group": "Integrations",
+        "pages": [
+          "integrations/overview"
+        ]
+      },
+      {
+        "group": "Apps",
+        "pages": [
+          "apps/desktop"
+        ]
+      },
+      {
+        "group": "Billing",
+        "pages": [
+          "billing/plans"
+        ]
+      },
+      {
+        "group": "Help",
+        "pages": [
+          "help/faq"
+        ]
+      }
+    ]
+  },
   "navbar": {
     "links": [
       {
-        "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "label": "vocal.solutions",
+        "href": "https://vocal.solutions"
+      },
+      {
+        "label": "Log in",
+        "href": "https://vocal.solutions/dashboard"
       }
     ],
     "primary": {
       "type": "button",
-      "label": "Dashboard",
-      "href": "https://app.mintlify.com"
+      "label": "Try for free",
+      "href": "https://vocal.solutions"
     }
   },
   "contextual": {
@@ -61,12 +118,5 @@
       "cursor",
       "vscode"
     ]
-  },
-  "footer": {
-    "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
-    }
   }
 }

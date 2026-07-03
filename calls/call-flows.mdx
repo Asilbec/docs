@@ -1,0 +1,37 @@
+---
+title: "Call flows"
+icon: "sitemap"
+description: "Decide exactly what happens when someone calls each of your numbers — hours, menus, your team, and your AI agent."
+---
+
+A call flow is a number's answering plan — the decision tree that runs in the first seconds of every inbound call. Each number has one. The default is the strongest promise in Vocal: **your AI agent answers everything, 24/7**. Call flows are how you layer your own rules around that.
+
+## The building blocks
+
+**Checks and branches** — steps that route the call:
+
+- **Business hours** — different paths for open, closed, and holidays
+- **Caller ID** — treat known contacts, VIPs, or blocked numbers differently
+- **IVR menu** — "press 1 for scheduling, 2 for billing" keypad menus
+- **Logic split** — branch on a condition
+
+**Destinations** — where a call can end up:
+
+- **AI agent** — hand the call to your agent (the usual final stop)
+- **Ring user / Ring group** — ring a teammate or a [team of them](/calls/ring-groups) on their Vocal apps
+- **Forward call** — send the call to any outside number
+- **Play message** — play an announcement
+- **Voicemail** / **Hang up**
+
+## Patterns that work
+
+- **AI-first, 24/7** *(the default)* — the agent answers every call; your team gets clean summaries instead of interruptions.
+- **Team-first during hours** — business hours check → ring your team → anyone who doesn't get picked up falls to the AI. Nobody hears voicemail.
+- **Menu for distinct lines** — IVR splits scheduling from billing, each branch going to the right agent or person.
+- **VIP lane** — Caller ID routes your key accounts straight to a person; everyone else gets the standard flow.
+
+## Editing a flow
+
+Open the number's call flow from **Settings → Numbers**. Add a step and it snaps into an open slot in the tree; every branch of every step always leads somewhere. The editor enforces this — it won't let you save a flow where a caller could fall into silence, which is why there's no "broken flow" state to debug at 9am on a Monday.
+
+Changes publish per number, so you can rebuild one line's routing without touching the others.

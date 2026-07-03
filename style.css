@@ -1,0 +1,14 @@
+/* Vocal brand overrides — lime CTA on ink, matching vocal.solutions
+   (MARKETING_LIME #e5ff2d / MARKETING_INK #080808). The button background
+   comes from colors.dark in docs.json; this fixes its text/icon to ink,
+   since the theme defaults them to white. */
+
+#topbar-cta-button span,
+#topbar-cta-button .z-10 {
+  color: #080808 !important;
+}
+
+#topbar-cta-button svg {
+  color: #080808 !important;
+  fill: #080808 !important;
+}
