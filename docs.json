@@ -88,6 +88,79 @@
           "help/faq"
         ]
       }
+    ],
+    "groups": [
+      {
+        "group": "Get started",
+        "pages": [
+          "index",
+          "getting-started/quickstart",
+          "getting-started/how-vocal-works"
+        ]
+      },
+      {
+        "group": "Phone numbers",
+        "pages": [
+          "numbers/get-a-number",
+          "numbers/porting",
+          "numbers/sms-registration",
+          "numbers/number-pools"
+        ]
+      },
+      {
+        "group": "Your AI agent",
+        "pages": [
+          "agent/behavior",
+          "agent/voice",
+          "agent/knowledge",
+          "agent/workflow"
+        ]
+      },
+      {
+        "group": "Calls & routing",
+        "pages": [
+          "calls/call-flows",
+          "calls/ring-groups",
+          "calls/recording",
+          "calls/analytics"
+        ]
+      },
+      {
+        "group": "Messaging",
+        "pages": [
+          "messaging/texting"
+        ]
+      },
+      {
+        "group": "Contacts & campaigns",
+        "pages": [
+          "campaigns/outbound"
+        ]
+      },
+      {
+        "group": "Integrations",
+        "pages": [
+          "integrations/overview"
+        ]
+      },
+      {
+        "group": "Apps",
+        "pages": [
+          "apps/desktop"
+        ]
+      },
+      {
+        "group": "Billing",
+        "pages": [
+          "billing/plans"
+        ]
+      },
+      {
+        "group": "Help",
+        "pages": [
+          "help/faq"
+        ]
+      }
     ]
   },
   "navbar": {
