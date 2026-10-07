@@ -5,3 +5,8 @@
 # Draft content
 drafts/
 *.draft.mdx
+
+# Hidden for now (Bek, 2026-10-07): AI agents and Campaigns aren't offered to customers.
+# The pages stay in the repo; docs.json redirects their URLs to the home page.
+agent/
+campaigns/

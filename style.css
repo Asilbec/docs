@@ -1,14 +1,34 @@
-/* Vocal brand overrides — lime CTA on ink, matching vocal.solutions
-   (MARKETING_LIME #e5ff2d / MARKETING_INK #080808). The button background
-   comes from colors.dark in docs.json; this fixes its text/icon to ink,
-   since the theme defaults them to white. */
+/* Clear Signal (SelfServe/DESIGN.md). The navbar CTA is an ink pill (white
+   in dark mode); blue stays for links and selection through colors.primary
+   in docs.json. Headings use regular/medium Inter, so hierarchy comes from
+   size and spacing, not bold. */
 
-#topbar-cta-button span,
-#topbar-cta-button .z-10 {
-  color: #080808 !important;
+#topbar-cta-button a > span:first-child {
+  background: #080808;
+  border-radius: 999px;
 }
 
-#topbar-cta-button svg {
-  color: #080808 !important;
-  fill: #080808 !important;
+#topbar-cta-button a span.text-white,
+#topbar-cta-button a svg {
+  color: #ffffff;
+}
+
+html.dark #topbar-cta-button a > span:first-child {
+  background: #ffffff;
+}
+
+html.dark #topbar-cta-button a span.text-white,
+html.dark #topbar-cta-button a svg {
+  color: #080808;
+}
+
+#page-title {
+  font-weight: 500;
+  letter-spacing: -0.025em;
+}
+
+#content h2,
+#content h3 {
+  font-weight: 500;
+  letter-spacing: -0.015em;
 }

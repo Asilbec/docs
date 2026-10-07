@@ -1,39 +1,50 @@
 ---
 title: "Outbound campaigns"
 icon: "phone-arrow-up-right"
-description: "Point an agent at a contact list and it works through the calls — with automatic retries and every result logged."
+description: "Work through a call list with your team or an AI agent, with do-not-call skipping, retries and results per campaign."
 ---
 
-Campaigns flip Vocal around: instead of answering, your agent makes the calls — lead follow-up, appointment reminders, reactivating past customers, confirming tomorrow's schedule.
+A campaign is a list of people to call. Owners and Admins create and run campaigns from **Campaigns** in the sidebar; Members don't see it. The first question is **Who makes these calls?**
 
-## Run a campaign
+- **Your team** (the default): reps work a queue one call at a time.
+- **AI agent**: an agent dials on its own and keeps going until the list is done.
 
-<Steps>
-  <Step title="Get your contacts in">
-    Add contacts in **Contacts** — people who've called you are already there.
-  </Step>
-  <Step title="Create the campaign">
-    Pick the agent that will make the calls and the contacts to call. Agents built for outbound work best with a [workflow](/agent/workflow) that gets to the point: who's calling, why, and what happens next.
-  </Step>
-  <Step title="Start it">
-    Vocal dials automatically, pacing calls within your plan's concurrent-call limit. Pause or resume anytime.
-  </Step>
-</Steps>
+## Team campaigns
 
-## No-answers and voicemail
+Setup has three steps: **Campaign**, **Leads** and **Team**. Under **Add your master list**, bring in leads with **Upload file** (CSV, XLSX or XLS), **Paste leads** (two columns, name and phone), or **Choose Google Sheet**. **Who should get the first leads?** splits the list across recruiters, evenly or by the number you set for each; enter 0 to assign someone's share later. Reps then call their leads from **Queue**.
 
-Unanswered calls and voicemails are retried automatically — by default up to **3 attempts, spaced 4 hours apart** (adjustable in your call settings). Every attempt and result is logged on the contact, and answered calls land in your **Inbox** with the same recording, transcript, summary, and outcome labels as inbound calls.
+## AI agent campaigns
 
-<Note>
-  Unanswered dials don't count against your included AI calls — see [how usage is billed](/billing/plans#ai-usage-credits).
-</Note>
+The steps are **Who calls**, **Goal**, **Recipients** and **Review**.
 
-## Call people the right way
+**Who calls.** Pick an agent that can call out (its **Routing** is **Outbound only** or **Inbound + outbound**). It dials from the number in its **Profile**, and a campaign won't place any calls for an agent without one. Assigning a number there also routes that number's incoming calls to the agent.
 
-Outbound calling has real rules (in the US, the TCPA). Practical version:
+**Goal.** A short description of what the campaign is for. What the agent says on the call comes from its [behavior](/agent/behavior) and [steps](/agent/workflow), so set those up first. This step also shows that the campaign uses the agent's own outcomes.
 
-- **Call people with a relationship or consent** — your leads, your customers, people who asked to be contacted. Not purchased lists.
-- **Call at reasonable local hours.**
-- **Honor "don't call me again"** — remove them from future campaigns.
+**Recipients.** Upload a CSV, XLSX or XLS file with one row per person and tell Vocal which column holds the phone number. Every other column becomes a variable the agent can use: a column named "Load Number" is `{{contact.load_number}}`, so an outbound opener can say "Hi `{{contact.name}}`, calling about load `{{contact.load_number}}`." The step then tells you how many rows are ready to call, skipped, or unusable. Numbers on your workspace's do-not-call list, and numbers already in another active campaign, are skipped.
 
-Warm lists ("you asked for an estimate last month") also convert dramatically better than cold ones — compliance and performance point the same direction.
+**Review.** Under **When should it start?** choose **Right away** or **At a set time**. **Calling hours and pacing** has:
+
+- **Only call between set hours**, in your computer's time zone.
+- **Calls at once**: how many calls run together. Leave it blank to use the agent's **Concurrency limit** (in its **Settings**), which starts at 1. Your plan also caps concurrent calls; see [Plans](/billing/plans).
+- **Max calls per day**, blank for no cap.
+
+## Running a campaign
+
+The campaign page has **Start**, **Pause** and **Resume**. Resuming puts back in line any contacts that were stuck partway through a dial. **Add contacts** imports another file into the same campaign.
+
+**No answer:** the contact is tried again 4 hours later, up to 3 attempts in total. You can't change these numbers today.
+
+**Voicemail:** the agent follows **Settings** › **Voicemail** › **When an outbound call reaches voicemail**. **End the call** is the default and doesn't retry. **Call back later** tries again after the hours in **Call back after** (24 by default), and those callbacks count toward the same 3 attempts. **Leave a voicemail** leaves a message, with an optional **Voicemail script**. Detection is best-effort, since the agent recognizes a voicemail greeting by what it hears.
+
+## Results
+
+The campaign page shows **Total calls**, **Completed** and **Answer rate**, plus a count for each outcome, and each recipient's row shows its status and attempts. **Reports** opens the campaign's reporting. Answered calls also show up in [Inbox](/inbox), like any other call.
+
+## Calling within the rules
+
+This isn't legal advice, but a few US rules apply to almost every campaign:
+
+- The FCC ruled in February 2024 that AI-generated voices count as "artificial" voices under the TCPA, so AI calls to cell phones need the person's prior consent, and marketing calls need it in writing.
+- Telemarketing calls are limited to 8 a.m. to 9 p.m. in the recipient's local time. **Only call between set hours** helps, but it uses one time zone for the whole list.
+- When someone asks not to be called again, stop calling them. In team campaigns, a rep marking someone do-not-call adds the number to the workspace list that future imports skip.

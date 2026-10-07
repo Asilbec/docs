@@ -1,37 +1,59 @@
 ---
 title: "Call flows"
 icon: "sitemap"
-description: "Decide exactly what happens when someone calls each of your numbers — hours, menus, your team, and your AI agent."
+description: "Choose what happens when someone calls one of your numbers: who rings and when voicemail picks up."
 ---
 
-A call flow is a number's answering plan — the decision tree that runs in the first seconds of every inbound call. Each number has one. The default is the strongest promise in Vocal: **your AI agent answers everything, 24/7**. Call flows are how you layer your own rules around that.
+A call flow is a number's plan for incoming calls. Every number gets one when you buy it: **Ring users** rings everyone on the number for 20 seconds, and if nobody picks up, the caller goes to **Voicemail**. You can change that for any number.
 
-## The building blocks
+Only Owners and Admins can edit call flows.
 
-**Checks and branches** — steps that route the call:
+## Open a number's call flow
 
-- **Business hours** — different paths for open, closed, and holidays
-- **Caller ID** — treat known contacts, VIPs, or blocked numbers differently
-- **IVR menu** — "press 1 for scheduling, 2 for billing" keypad menus
-- **Logic split** — branch on a condition
+<Steps>
+  <Step title="Pick the number">
+    Go to **Settings → Numbers** and click the number.
+  </Step>
+  <Step title="Open the Call flow tab">
+    The tab shows a preview of the flow that's live on this number.
+  </Step>
+  <Step title="Edit it">
+    Hover the preview and click **Edit call flow**.
+  </Step>
+</Steps>
 
-**Destinations** — where a call can end up:
+A number can hold several flows, but only one is **Live**. Use **New flow** to build an alternative, like a holiday schedule, without touching the live one.
 
-- **AI agent** — hand the call to your agent (the usual final stop)
-- **Ring user / Ring group** — ring a teammate or a [team of them](/calls/ring-groups) on their Vocal apps
-- **Forward call** — send the call to any outside number
-- **Play message** — play an announcement
-- **Voicemail** / **Hang up**
+## Steps you can use
 
-## Patterns that work
+Click or drag a step from the **Steps** panel. It attaches to an open branch, so every branch always leads somewhere. Select a step to change its settings on the right.
 
-- **AI-first, 24/7** *(the default)* — the agent answers every call; your team gets clean summaries instead of interruptions.
-- **Team-first during hours** — business hours check → ring your team → anyone who doesn't get picked up falls to the AI. Nobody hears voicemail.
-- **Menu for distinct lines** — IVR splits scheduling from billing, each branch going to the right agent or person.
-- **VIP lane** — Caller ID routes your key accounts straight to a person; everyone else gets the standard flow.
+| Step | What it does |
+|---|---|
+| **Business hours** | Splits calls into **During hours** and **After hours**. Pick a timezone and set open hours for each day. |
+| **Ring users** | Rings teammates' Vocal apps at once, and the first to answer takes the call. Choose **Everyone on this number** or **Specific teammates**, and how long to ring. If nobody answers, the call follows **If call is missed**. |
+| **Voicemail** | Plays a greeting and records a message. |
+| **Hang up** | Ends the call. |
 
-## Editing a flow
+Some older flows contain a **Ring group** step. It still rings its group, but you can't add new ones. [Ringing your team](/calls/ringing-your-team) covers who rings and how.
 
-Open the number's call flow from **Settings → Numbers**. Add a step and it snaps into an open slot in the tree; every branch of every step always leads somewhere. The editor enforces this — it won't let you save a flow where a caller could fall into silence, which is why there's no "broken flow" state to debug at 9am on a Monday.
 
-Changes publish per number, so you can rebuild one line's routing without touching the others.
+### Voicemail step
+
+Select the step and click **Set greeting** to upload a file, record one, or generate one with **Text to speech**. You can also type a greeting in the box and Vocal reads it aloud. A greeting on this step replaces the number's usual greeting, which is handy for an after-hours message that gives your on-call dispatcher's hours.
+
+**Transcribe voicemails** is on by default. See [Voicemail](/calls/voicemail) for where messages land.
+
+## Publish your changes
+
+As soon as you edit, a bar says **This call flow has unpublished changes**. Click **Publish changes** to make them live, or **Discard changes** to go back to the last saved version. Cmd+S (Ctrl+S on Windows) saves a draft without publishing.
+
+If the flow isn't the number's live flow yet, publishing only saves a new version. Switch the number over with **Set live** on the **Call flow** tab, or **Set as live** in the flow menu at the top left of the editor. Changes affect only this number.
+
+## Hold music
+
+Below the flow preview, **Hold music** sets what callers on this number hear while they wait: when a teammate puts them on hold. Choose **Upbeat** or **Mellow**, or click **Upload custom track** to upload a file (up to 5 minutes), record one, or use text to speech. Only upload audio you have the rights to.
+
+## Example: a recruiting line
+
+Start with **Business hours** set to your office hours. Send **During hours** to **Ring users** with **Everyone on this number**, and let **If call is missed** go to **Voicemail**. Send **After hours** straight to **Voicemail** with a greeting that says when the office opens.

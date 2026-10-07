@@ -1,32 +1,52 @@
 ---
 title: "Shape your agent's behavior"
 icon: "sparkles"
-description: "Your agent's role, rules, and style decide what it says on every call — and publishing controls when changes go live."
+description: "Set an agent's purpose, personality, rules and opening line, test the draft with Preview, and publish when it's ready."
 ---
 
-Your agent's behavior is written in plain language, in three parts. Together they're the difference between "a bot picked up" and "someone helpful answered."
+Agents live in **AI Agents**, which only Owners and Admins see. Open an agent and pick **Agent** in the editor's left column: that one page holds who the agent is, how it talks, the rules it follows, and its [voice](/agent/voice). Fields save as you change them; nothing here has a Save button.
 
-## The three parts
+## Create an agent
 
-- **Role** — who the agent is and what business it represents: *"You're the front desk for Beacon Dental in Austin. You help patients book, reschedule, and get quick answers."*
-- **Rules** — what it must and must never do: *"Always collect the caller's name and callback number. Never quote treatment prices — say the office will confirm. If someone is in pain, offer the soonest slot and flag the call urgent."*
-- **Style** — how it talks: *"Warm and brisk. Short sentences. No corporate filler."*
+Click **New agent**. The first choice is the type:
 
-The setup wizard drafts all three from your business description; edit them anytime in your agent's editor.
+- **Simple agent** (marked **Recommended**) holds a free-form conversation. You fill in each step yourself: **Type**, **Basics**, **Behavior**, **Knowledge**, **Test**. No AI drafting happens here; the **Behavior** step starts from a default tone and rules you can change.
+- **Structured agent** follows a set call path. You describe the job, answer a few questions, and AI proposes the [steps](/agent/workflow), opening line, tone and rules. You review each change before it's applied.
 
-## Writing instructions that work
+**Basics** asks for the **Agent name**, which **Calls it handles** (**Inbound**, **Outbound** or **Both**), a **Responsibility** written in plain language, and a **Voice**. The last step, **Save draft and test**, saves the agent and starts a call in your browser. The wizard never publishes; you do that from the editor.
 
-- **Be concrete.** "Offer Tuesday or Thursday if the caller is flexible" beats "be helpful with scheduling."
-- **Tell it what to do instead, not just what not to do.** "Don't discuss pricing" leaves a dead end; "for pricing, take their number and say Maria will call back within the hour" gives the call somewhere to go.
-- **Put facts in [Knowledge](/agent/knowledge), not in rules.** Hours, services, addresses, and FAQs belong in the knowledge base where they're easy to keep current. Rules are for judgment and boundaries.
-- **Steal from your best employee.** Listen to how your best person answers the phone and write down what they actually say.
+## What's on the Agent page
 
-## Drafts, publishing, and testing
+**Profile** has the **Display name**, a one-sentence **Purpose**, and the **Phone number**. The agent's instructions open with "You are [name] from [workspace]." followed by the purpose, so write it as a job: "Screens CDL-A driver applicants and books a call with a recruiter." Picking a number here sends that number's calls to the agent (see [Let AI answer a number](/agent/lola)).
 
-Your edits go to the agent's **draft** — live callers keep hearing the **published** version until you click **Publish**. That means you can rewrite instructions in the middle of the workday, run [test calls](/getting-started/quickstart) against the draft, and only ship when it sounds right.
+**Routing** decides the direction: **Inbound only**, **Outbound only**, or **Inbound + outbound**. Only agents that can call out show up when you create an AI [campaign](/campaigns/outbound).
 
-Publishing keeps a version history, so a change that isn't working can be rolled back.
+**Personality** has a **Vibe** (**Warm**, **Professional**, **Playful**, **Direct** or **Empathetic**) and a **Brevity** slider that runs from **Concise** to **Detailed**. **Advanced — custom instructions** takes free-form text for anything the controls don't cover.
+
+**Rules** is a list of switches, such as never making up prices or availability. Turn on the ones you want and use **Add a custom rule…** for your own. A good rule gives the agent somewhere to go instead of a dead end: "Never quote a rate on a load. Take the load number and say a dispatcher will call back within the hour."
+
+**Opener** is the agent's first line, with an **Inbound greeting** and an **Outbound opener** depending on its routing. The outbound opener can use contact details, like `{{contact.name}}` or a spreadsheet column such as `{{contact.truck_type}}`. Add a fallback in quotes, `{{contact.name|"there"}}`, for contacts who don't have that detail. If a detail is missing and there's no fallback, the agent skips the saved line and opens in its own words.
+
+## Try the draft with Preview
+
+**Preview**, at the bottom of the editor's left column, starts a call with the agent in your browser. It always runs the draft, so you hear changes before callers do. Switch between **Inbound** and **Outbound**; outbound previews let you fill in the contact details your opener uses. During the free trial, a workspace can place 25 test calls.
+
+## What Publish controls
+
+Live calls use the last published version for some settings and your latest saved edits for others. When the draft differs from what's live, a bar at the bottom shows **Revert** and **Publish**. **Publish** opens **Review draft changes**, which lists each changed field side by side; click **Confirm publish**.
+
+| Waits for **Publish** | Reaches live calls as soon as it's saved |
+| --- | --- |
+| Purpose, vibe, brevity, custom instructions and rules | Display name and phone number, and your workspace name |
+| Opener | [Steps](/agent/workflow), including **Who speaks first** |
+| Voice, speaking rate and latency mode | The text of knowledge sources |
+| Routing, **Outcomes**, **Data** and **Tools** | Everything under **Settings**, plus the endpointing delay |
+| Which [knowledge](/agent/knowledge) sources are switched on | |
+
+Until an agent is published for the first time, calls to its number use the draft. **Publish** stays disabled while the Steps page reports issues.
+
+**Versions** lists every published version. **Roll back** points live calls at an older one; if the draft has unpublished changes, Vocal saves them as a new version first. Rolling back doesn't restore steps, and **Revert** doesn't undo saved steps either.
 
 <Tip>
-  After any real call in your **Inbox**, read the transcript and ask: "What would I have said differently?" Turn the answer into a rule, test it, publish. Ten minutes of this a week compounds fast.
+  After a real call, read the transcript in [Inbox](/inbox) and ask what your best recruiter would have said instead. Turn the answer into a rule, try it in **Preview**, then publish.
 </Tip>

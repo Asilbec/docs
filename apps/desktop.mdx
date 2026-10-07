@@ -1,36 +1,53 @@
 ---
 title: "Vocal for desktop"
 icon: "desktop"
-description: "The Mac and Windows app: a real phone window for taking calls, native notifications, and your AI running in the background."
+description: "The Mac and Windows app: Vocal in its own window, rings that keep reaching you after you close it, an optional pop-out phone window, and automatic updates."
 ---
 
-The desktop app makes Vocal feel like a phone that lives on your computer — calls ring where you work, texts notify natively, and the phone window stays out of your way until you need it.
+The desktop app is the same Vocal you use in the browser, in its own window. It keeps ringing after you close the window, gets your attention when a call comes in, and can pop a call out into a small phone window. You don't need it, but people who take calls all day usually want it.
 
 ## Install
 
-Download at **[vocal.solutions/api/download](https://vocal.solutions/api/download)** — it detects your platform automatically. Sign in and you're done; updates install themselves in the background.
+Go to [vocal.solutions/download-app](https://www.vocal.solutions/download-app). The page offers the right build for the computer you're on.
 
-- **macOS** — signed and notarized; open the DMG and drag to Applications.
-- **Windows** — during the beta the installer isn't yet code-signed, so SmartScreen may warn on first run. Click **More info → Run anyway**. (Signing is in progress.)
+- **Mac:** **Download for macOS** gets the Apple Silicon build. On an older Intel Mac, click **Download for Intel** instead. Open the DMG and drag Vocal into your Applications folder. The app is signed and notarized by Apple.
+- **Windows:** **Download for Windows** gets a signed installer. For the first few days after a new release, Windows SmartScreen may still warn that the app is unrecognized; click **More info**, then **Run anyway**.
 
-<Note>
-  Nothing about the desktop app is required — the browser app does everything. Desktop is for teams who take calls all day and want the native feel.
-</Note>
+## Sign in
+
+Click **Continue with Google** and Vocal opens your usual web browser to finish signing in, then hands you back to the app. That trip through the browser is expected. If the browser is already signed in to Vocal, it asks whether to continue with that account or choose another. **Continue with email** signs you in without leaving the app.
+
+## Updates
+
+Vocal downloads updates in the background and installs them when you quit, or the next time it starts. **Settings → About** shows your version and has **Check for updates**. Now and then an update is required, and Vocal asks you to restart before you keep working.
+
+On a Mac, automatic updates only work when Vocal runs from the Applications folder. If you opened it from the DMG or Downloads, About shows **Move Vocal to your Applications folder to enable automatic updates.**
+
+## Calls and rings
+
+Calls work the same as in the browser: a banner at the top of the main window to answer, then the full call view or the floating widget (see [Make and take calls](/calls/calling)). The app adds two things:
+
+- The Dock icon bounces on a Mac, or the taskbar button flashes on Windows, until you answer or the ring stops. This doesn't happen while you're set to Do Not Disturb.
+- Incoming calls and texts show as system notifications. **Settings → Notifications → Desktop notifications** sends a test notification and opens your computer's notification settings, where you choose how Vocal's alerts appear.
 
 ## The phone window
 
-Your calls live in a dedicated window with three shapes:
+If you'd rather have calls in a small window over your other apps, click **Pop out call** in the call view during a call, or **Pop out to its own window** on the floating widget. Vocal remembers the choice and opens later calls there. To go back, click **Back to app**; the call returns to the main window and later calls stay there. On the **Keypad** page, **Pop out keypad** opens the same window as a dialer.
 
-- **Compact** — keypad, recent calls, and contacts. The everyday view.
-- **Mini** — during a call it can shrink to a small always-on-top strip with just the call controls, so it never covers your work.
-- **Expanded** — the full-width view with the live transcript and details captured so far. Drag the window wider to switch.
+It also opens by itself when a call rings while Vocal is minimized or in the tray, so you can still answer. It has three sizes and switches between them as you use it:
 
-## Built for incoming calls
+| Size | What it shows |
+|---|---|
+| **Mini** | A small card with the caller and call controls. Calls popped out from the floating call widget start here. **Pop out call** in the full call view opens **Expanded**. |
+| **Compact** | A narrow window with the dialer and the call. **Pop out keypad** opens this size. |
+| **Expanded** | A wider window with the live transcript and panels like **Transfer** and **Audio**. |
 
-- **You can't miss a ring** — the dock icon bounces (Mac) or the taskbar flashes (Windows), on top of the ring itself.
-- **Closing the window doesn't take you offline** — Vocal keeps running in the system tray / menu bar, so inbound calls still reach you. Quit fully from the tray icon.
-- **Launch at login** (optional) — recommended if you're in a [ring group](/calls/ring-groups), so a morning reboot doesn't silently take you out of the rotation.
+In Mini, **Expand phone window** opens the transcript in Expanded. Opening **Transcript**, **Notes**, or **Messages** also widens the window, and **Minimize to mini player** shrinks a call back to Mini. Mini and Compact are fixed sizes; only Expanded can be resized by dragging. **Keep on top**, in the window's **Settings** menu, keeps it above other windows and is on by default.
 
-## Sign-in note
+## Closing and the tray
 
-Signing in with Google opens your regular browser to complete sign-in securely, then bounces you straight back into the app — that round-trip is expected, not a glitch.
+Closing the main window doesn't quit Vocal. It keeps running in the menu bar (Mac) or system tray (Windows), so calls still ring you. The tray icon's menu has **Show Vocal** to bring the window back and **Quit** to close it completely; on Windows, clicking the icon also brings the window back. Vocal won't close its window while you're on a call.
+
+## Start automatically
+
+If Vocal isn't running, calls can't ring you on this computer, and a Monday-morning restart is an easy way to miss the first few. Turn on **Launch on startup** from the setup card on your home page while it's showing, or click **Turn on** when the "Start Vocal automatically" banner appears. Vocal then starts whenever you log in to your computer. To stop it, remove Vocal from your computer's login items (Mac) or startup apps (Windows).

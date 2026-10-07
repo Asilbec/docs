@@ -1,0 +1,82 @@
+---
+title: "CRM troubleshooting"
+sidebarTitle: "Troubleshooting"
+description: "Find missing leads, understand unchanged counts, and recover from import, call, text, and save problems."
+icon: "circle-question"
+---
+
+## My list is empty or a driver is missing
+
+1. Check that you're in the right workspace and, if you have the tabs, **My leads**.
+2. Choose **All leads** and **All lists**. Clear search and status filters.
+3. Search for the driver's phone number as well as their name.
+4. Check **My imports** if you imported the list. Some rows may have been skipped or the import may be partial.
+5. If an Owner or Admin was assigning leads, ask them to check that they handed the leads out to you. Being in the Pool isn't an assignment.
+
+A lead with no due action can be absent from Today. A reassigned lead can leave your list. Neither necessarily means its history was deleted.
+
+## Why is a lead still in Today after I called?
+
+Today includes leads you've worked today as well as leads that need action. Check **Next follow-up** rather than assuming every visible row needs another call. A waiting reply or a promise the call didn't fulfill can also keep the lead relevant.
+
+## I called, but Last contact or Follow-ups didn't change
+
+Check the call in **Inbox → Calls** and give the finished call a moment to update. Confirm you called the same number as the lead. A failed dial that never placed a call doesn't count as contact.
+
+**Follow-ups** measures plan steps. An early call, a repeated attempt, or a call when the next step is a text may not advance it. A call from outside Vocal isn't recorded automatically.
+
+If the call exists in Vocal but the lead still doesn't update, send support the list name and call time. Don't keep dialing just to make the counter change.
+
+## I set a callback, but it's missing or the time looks wrong
+
+Open the lead and check **Next follow-up**. Confirm you saved the wrap-up instead of choosing **Keep as is**. Callbacks use the workspace's time zone, and date presets count working days.
+
+A newer reply can appear as **Reply now** ahead of the promise. Stopping states can take priority too. A qualifying call or sent text at or after a promised time can clear that promise. See [Callbacks and plans](/crm/follow-ups).
+
+## The plan stopped after voicemail
+
+If voicemail answered the call, choose **Left voicemail** in the wrap-up. Otherwise the connected call may be treated as a conversation that stops the plan. If the wrap-up is no longer available, ask support to check the call rather than inventing a different status to make the count match.
+
+## I can't call or nobody can hear me
+
+Allow microphone access in your browser or computer settings. Check your microphone and speaker in **Settings → Audio**. Confirm you have a Vocal number available for outgoing calls and aren't already placing another call.
+
+A read-only **View as** screen and a do-not-call restriction can disable calling. See [Make and take calls](/calls/calling) for the audio and caller-ID controls.
+
+## I can't text a lead
+
+Read the error for the specific lead. US texting needs approved registration, and CRM refuses do-not-call or opted-out recipients. A send can be skipped if the lead's assignment or plan step just changed.
+
+Check **Inbox → Chats** before retrying a message that may already have sent. A plan text can show progress when queued and reopen if the send later fails. See [Texting leads](/crm/texting).
+
+## The import has numbers instead of names
+
+Check whether the first row was treated as headings and whether the name column was mapped to **Name**, **First name**, or **Last name**. Keeping “Driver name” as an extra sheet column doesn't fill the lead's name.
+
+For untouched leads, use **My imports → Undo import**, fix the mapping, then import again. Worked leads stay when you undo; ask support for help correcting those without losing their history.
+
+## My import stopped. Should I try again?
+
+Read the result and check **My imports** first. An import can add some rows before stopping. Correct the cause, then retry; previously added numbers are checked for duplicates. Don't enable a duplicate override merely to force every row through.
+
+## I can't edit a field, note, or list
+
+Check whether you're in read-only **View as**, whether the lead is still assigned to you, and whether the list is one you own. An assigned list isn't automatically a personal list you can rename or delete.
+
+If a field was removed or someone else edited its value, reopen the lead and check the current value. For an unsaved note, keep a copy of your text before leaving the page. Normal lead notes save on Enter or when you leave the field; wrap-up changes need **Save**.
+
+## I can't open a call or see an AI value
+
+Lead access and conversation access are separate. A number reassignment or a change in your permissions can remove access to the source. Ask your Owner or Admin to check access rather than copying a teammate's private conversation into your lead.
+
+## Still stuck?
+
+Email [team@vocal.solutions](mailto:team@vocal.solutions) with:
+
+- Your workspace and list name.
+- What you clicked and what you expected.
+- The exact error message and an approximate time, including your time zone.
+- Whether you were in the browser or desktop app.
+- A screenshot of the problem, with unrelated driver details hidden.
+
+For a call or text problem, include its time so we can identify the event. Never send your password, sign-in code, or an entire lead spreadsheet just to report an error.

@@ -1,31 +1,62 @@
 ---
-title: "SMS registration (US texting)"
+title: "SMS registration"
+description: "Register your business so your local numbers can text US contacts, what it costs, and how long it takes."
 icon: "shield-check"
-description: "US carriers require business texting registration (A2P 10DLC). Here's what it is, what it costs, and how to set it up in Vocal."
 ---
 
-To text from a US business number, carriers require your business to be registered — a program called **A2P 10DLC**. It's not a Vocal rule; it applies to every business phone provider. Registered traffic gets delivered reliably; unregistered traffic gets filtered as suspected spam.
+US carriers require every business that texts from a local number to register first. Until you're registered, sending texts is turned off, and the message box says why. Incoming texts still arrive, and calling isn't affected.
 
-## Set it up
+Owners and Admins handle registration in **Settings → Compliance**. You need at least one local number first; registration attaches to your local numbers, and any you add later join it automatically.
 
-1. Open **Settings → Compliance**.
-2. Fill in your business details — legal name, EIN or business registration, address, website, and a short description of what you text customers (appointment confirmations, follow-ups, replies to inquiries).
-3. Submit. We prepare and file the registration with the carriers and review it before it goes out, which avoids the most common rejection reasons.
+## What you'll need
 
-There's a **one-time $99 registration fee** that covers the carriers' brand and campaign registration costs plus our review.
+- Your legal business name and address, exactly as they appear on your IRS paperwork
+- Your EIN (not needed for sole proprietors)
+- Your business website, plus dedicated privacy policy and terms pages on that site (sole proprietors can skip the website, but still need privacy policy and terms pages)
+- A contact at the business with an email on your business domain; free addresses like gmail.com aren't accepted
+- A short description of what you text, and 2 or 3 example messages of at least 20 characters each
+- A public web page where people opt in to your texts
+
+## Register
+
+<Steps>
+  <Step title="Start">
+    In **Settings → Compliance**, click **Register now**. Some fields are filled in from your workspace already.
+  </Step>
+  <Step title="Your business and Texting">
+    Fill in both steps. If you've published a Vocal form, its link is filled in as your opt-in page.
+  </Step>
+  <Step title="Review & pay">
+    This step lists every fee and the total due today. Click **Continue to payment**. Only the workspace Owner can pay. If an Admin submits, the Owner finishes from the Compliance page, where the button shows the amount (for example, **Pay \$26.27 and submit**).
+  </Step>
+</Steps>
+
+We submit your registration as soon as payment goes through.
+
+## Fees
+
+| | Most businesses | Sole proprietors |
+| --- | --- | --- |
+| Business texting registration (one-time) | \$4.64 | \$4.64 |
+| Texting campaign review (one-time) | \$15.45 | \$15.45 |
+| Texting plan, first 3 months | \$6.18 | \$30.90 |
+| **Due at registration** | **\$26.27** | **\$50.99** |
+| Texting plan after the first 3 months | \$2.06/month | \$10.30/month |
+
+After the first three months, the monthly fee is billed to your account balance. Two other charges can come up. If carriers reject a campaign that has already been reviewed, contact support. Resubmitting costs another review (\$15.45) from your account balance, plus a new 3-month term if the campaign has to be recreated; fixing a rejected business-details check before that point is free. If support arranges enhanced business verification for you, that's \$42.75.
+
+Some older workspaces see a different flow on their Compliance page, with a single one-time fee and a review by our team before anything is filed. If that's what yours shows, follow it.
 
 ## How long it takes
 
-Carrier approval typically takes anywhere from a few business days to a couple of weeks — it's their queue, not ours. We'll let you know as soon as you're approved. Calling is unaffected the whole time; expect US texting to be unreliable until approval, because carriers filter unregistered senders.
+Approval usually takes less than a week. The Compliance page shows where you are: **Registration submitted** and then **Texting is on**. In between you may see **Checking your business details** while your details are matched against public records; new businesses can take a few weeks to show up there. Owners and Admins get an in-app notice and an email when you're approved or if something needs fixing.
 
-## The consent rules that keep you deliverable
+## Consent, STOP, and HELP
 
-Carriers care most about **opt-in** — that people agreed to hear from you by text:
+Only text people who gave you their number and agreed to hear from you. Registration asks for your opt-in page, and the consent wording on it has to mention texts, message frequency, message and data rates, STOP, and HELP.
 
-- Only text people who gave you their number and agreed to be contacted.
-- Vocal's built-in forms include carrier-compliant consent language automatically (unchecked-by-default checkbox, message rates disclosure, privacy policy link) — use them for lead capture and you're covered.
-- **STOP always works.** When someone replies STOP, they're unsubscribed per carrier rules; HELP returns assistance info. Don't text someone who opted out.
+Your registration also sets up automatic keyword replies. STOP, UNSUBSCRIBE, CANCEL, END, or QUIT unsubscribes the sender; START opts them back in; HELP or INFO gets a reply with the contact email and phone number from your registration. Vocal records STOP replies, and CRM marks those leads **Opted out** and won't text them. Don't text anyone who has replied STOP.
 
-<Warning>
-  Buying contact lists and cold-texting them will get your registration flagged and your delivery rates destroyed — and it's illegal in most cases. Text people who asked to hear from you.
-</Warning>
+<Tip>
+  Calls getting labeled "Scam Likely"? The **Clear Scam Likely labeling** card on the same page links to the Free Caller Registry, which you fill in yourself.
+</Tip>

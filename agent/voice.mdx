@@ -1,25 +1,41 @@
 ---
 title: "Choose your agent's voice"
 icon: "microphone"
-description: "Pick from curated voice personalities or the wider voice library — the voice is the first impression your callers get."
+description: "Pick one of Vocal's suggested voices or search the full library, then tune how fast the agent talks and how long it waits before replying."
 ---
 
-Callers decide in the first few seconds whether they're talking to something helpful or something robotic. The voice carries most of that impression.
+The voice settings sit at the bottom of an agent's **Agent** page. **Selected voice** shows the current voice with a play button; click **Change voice** to pick another.
 
-## Voice personalities
+## Suggested voices
 
-The fastest path is a **personality** — a curated character where the voice and delivery style are matched to work well together. Browse them in your agent's voice settings and preview each with a sample line. Pick the one that sounds like someone you'd hire for your front desk.
+**Choose a voice** opens with six voices picked for business calls, each with a short description and a preview:
 
-## The voice library
+| Voice | Sounds |
+| --- | --- |
+| Ava, Sophie, Grace | Female, American |
+| Marcus, Ethan | Male, American |
+| Oliver | Male, British |
 
-Want more choice? The voice library has a wider range of voices across accents, ages, and energy levels. Selecting a library voice replaces the personality's voice while your agent's [behavior](/agent/behavior) stays exactly the same.
+Select one and click **Save voice**. The new-agent wizard offers the same list on its **Basics** step.
 
-## Picking well
+## Browse all voices
 
-- **Match your customers' expectations, not your taste.** A med-spa, a roofing company, and a law office should not sound the same.
-- **Clarity beats character.** A distinctive voice that's occasionally hard to understand loses to a plain voice that never is.
-- **Test on a real phone.** Voices sound different through a phone speaker in a parking lot than through your headphones. Call your own number before you commit.
+For something else, click **Browse all voices** and search the full voice library. You can filter by **Gender** (**Any**, **Female**, **Male**) and **Accent** (**Any**, **US**, **UK**), and **Hide novelty voices** is on until you switch it off. The filters are best-effort, so play a voice before you save it.
 
-## Changing voices
+Changing the voice doesn't touch the agent's [behavior](/agent/behavior); it says the same things in a different voice.
 
-Voice changes follow the same [draft → publish](/agent/behavior#drafts-publishing-and-testing) model as everything else: test the new voice in a draft test call, and callers hear it only after you publish.
+## Voice tuning
+
+- **Speaking rate** runs from 0.70x to 1.20x. Slow it down a little if drivers keep asking the agent to repeat pay details.
+- **Latency mode** trades speed for fidelity. **Balanced** (about 300 ms) replies faster and suits most live calls; **Normal** (about 500 ms) sounds slightly better when speed matters less.
+- **Endpointing delay** is how long the agent waits after the caller stops talking before it answers, from 0.20 to 2 seconds (0.30 by default). If it keeps cutting in while someone reads out a load number or pauses to think, raise it a little.
+
+## Hear it before callers do
+
+Use **Preview** at the bottom of the editor's left column. It calls the agent in your browser using the draft, so it plays the voice you just picked. Calling the agent's phone number doesn't test a change: that call gets the published voice.
+
+The voice, speaking rate and latency mode wait for **Publish**. The endpointing delay is stored with the agent's settings and applies to live calls as soon as you change it. [What Publish controls](/agent/behavior#what-publish-controls) has the full list.
+
+<Tip>
+  Pick for the people calling, not for yourself. A driver on a speakerphone in a truck cab needs a clear, steady voice more than a distinctive one.
+</Tip>

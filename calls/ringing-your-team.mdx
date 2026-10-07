@@ -1,0 +1,36 @@
+---
+title: "Ringing your team"
+icon: "phone-volume"
+description: "Choose who rings when a number is called, what happens when nobody answers, and how to transfer a live call to a teammate."
+---
+
+When someone calls a Vocal number, it rings the people on that number all at once. The first person to answer takes the call, and the others stop ringing. Calls ring in the [desktop app](/apps/desktop) and in any browser tab where you're signed in to Vocal, so keep one of them open during your shift.
+
+## Who's on a number
+
+The people on a number are its **Users**. To change them, go to **Settings → Numbers**, pick the number, and open the **Users** tab. Click **Add users** to add teammates, or remove someone from the list. Only Owners and Admins can change a number's users; a group manager can do the same for their group's numbers from [Groups](/team/groups).
+
+Being on a number means more than ringing. Users can call and text from it and see its full history in their Inbox, including voicemail.
+
+## How the call flow rings them
+
+A new number's [call flow](/calls/call-flows) starts with a **Ring users** step, then **Voicemail**. Select the **Ring users** step in the editor to change it:
+
+- **Ring**: **Everyone on this number** rings whoever is on the **Users** tab when the call comes in, so adding or removing a user takes effect on the next call without editing the flow. **Specific teammates** rings only the people you check. When you set a flow like that live, the number is assigned to the first person you picked, and whoever had it before comes off.
+- **Ring for (seconds)**: how long to ring before giving up. The default is 20.
+
+If nobody answers in time, the call follows the step's **If call is missed** branch. That's **Voicemail** unless you change it.
+
+<Tip>
+A number you block for yourself in **Settings → Blocked** won't ring you. It still rings everyone else on the number.
+</Tip>
+
+## Transfer a call you're on
+
+During a call, click **Transfer** and choose where to send it:
+
+- **Team**: a teammate. Their app rings.
+- **Groups**: one of your workspace's existing ring groups, if it has any. These aren't the management groups on the [Groups](/team/groups) page.
+- **Number**: any outside phone number.
+
+You stay on the line with the caller while it rings. When the other person answers, you drop off and the caller is connected to them. If nobody answers within about 35 seconds, the transfer stops and you're still on the call.

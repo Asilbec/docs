@@ -1,0 +1,66 @@
+---
+title: "Groups and managers"
+icon: "people-group"
+description: "Organize teams like Recruiting or Dispatch and choose managers who can oversee the calls and texts on that team's numbers."
+---
+
+A group is a team in your workspace, such as Recruiting or Dispatch, with one or more managers. Managers can see and work the calls, texts, and voicemail on the group's numbers without becoming Admins.
+
+Groups don't change who rings. A number still rings the people on its **Users** tab (see [Ringing your team](/calls/ringing-your-team)), and managers aren't notified about incoming calls or texts unless they're on the number themselves. Being a plain member of a group gives no extra access either: two recruiters in the same group still can't see each other's drivers.
+
+## Create a group
+
+Owners and Admins create groups in **Settings → Groups** with **New group**. The editor has four steps:
+
+1. **Group name**, like "Recruiting".
+2. **Work summary**: a **Work type** (General, Recruiting, Dispatch, or Updates) and an optional description of what the team does. Vocal uses this to focus the AI summaries of calls on the group's numbers.
+3. **Group managers**: who oversees the team.
+4. **Members**: the people on the team. The numbers they're currently assigned to are added to the group automatically.
+
+Click **Create group** to save, and **Edit group** to change it later. Adding a member later brings in their current numbers; removing one takes their numbers out unless another member shares them.
+
+Managers can create groups too, and they manage each group they create. Only Owners and Admins can archive a group, from the last step of **Edit group**. That removes the managers' access but keeps everyone's numbers and history.
+
+## What managers can do
+
+For the numbers in their groups, a manager can:
+
+- See calls, texts, voicemail, and recordings. In the Inbox and on the **Voicemail** page, the number filter lists their groups.
+- Call and text from those numbers. The customer sees the business number, and Vocal shows the manager as the person who made the call or sent the text.
+- See a group report in [Analytics](/calls/analytics) that counts only work on those numbers.
+- Listen in on, and end, live calls on those numbers from **Live**. Calls an Owner or Admin is on aren't included.
+
+To set up the team itself, managers (and Owners and Admins) click **Manage team** on the group in **Settings → Groups**:
+
+- **People**: **Invite teammate** sends an invitation to join the workspace and this group. Managers can only invite regular members. Each accepted teammate gets one included number.
+- **Numbers**: **Add number** finds a new number for the group. Vocal shows whether it's included with your plan or what it costs per month before you confirm with **Add included number** or **Continue to payment** (see [Plans and billing](/billing/plans)). **Assign people** chooses who uses each number.
+- **Replace teammate**: hands a departing employee's work to someone else. See below.
+
+When you invite people from **Settings → Members**, you can also pick a **Group** for them.
+
+## Hand off a departing teammate
+
+<Steps>
+  <Step title="Pick who's leaving and who takes over">
+    In **Manage team**, open **Replace teammate**. Choose the **Departing teammate** and the **Replacement**. The replacement has to be in the group already.
+  </Step>
+  <Step title="Review">
+    Click **Review handoff**. Vocal checks the departing teammate's contacts, including notes and leads they never reached.
+  </Step>
+  <Step title="Confirm">
+    Click **Confirm handoff**. Their numbers and personal contacts move to the replacement, and their workspace access ends when it finishes.
+  </Step>
+</Steps>
+
+Calls and texts keep their original authors. If the replacement already has a contact with the same phone number, the handoff pauses; sort it out, then click **Retry after review**. You can **Cancel handoff** until contacts start moving.
+
+A handoff only works for a regular member who works only in this group. If their number's call flow rings **Specific teammates**, an Admin has to switch that **Ring users** step to **Everyone on this number** first.
+
+## What managers can't do
+
+- See numbers outside their groups.
+- Delete calls, texts, or voicemail. That's for Owners and Admins.
+- Change roles, billing, call flows, or other workspace settings.
+- Archive a group or invite Admins.
+
+For roles themselves, see [Members and roles](/team/members-and-roles).

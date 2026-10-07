@@ -24,6 +24,7 @@ numbers/               — buying, porting, SMS registration
 agent/                 — behavior, voice, knowledge, workflow
 calls/                 — call flows, ring groups
 messaging/             — texting
+crm/                   — recruiter workflow, imports, calls, follow-ups, texting, details, access, troubleshooting
 campaigns/             — outbound campaigns
 integrations/          — live vs building states
 apps/                  — desktop app

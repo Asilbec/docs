@@ -1,0 +1,99 @@
+---
+title: "Import and manage lead lists"
+sidebarTitle: "Import leads"
+description: "Bring in a spreadsheet, check duplicate numbers, and recover from a mistaken import."
+icon: "file-import"
+---
+
+Click **New list** in CRM to import a list for yourself (in an empty CRM, **Upload your own list**). Give it a name you can recognize, such as “October driver applicants.” Your personal import goes straight to your leads. An Owner or Admin importing into the team's **Pool** must hand those leads out before recruiters see them.
+
+## Import a spreadsheet
+
+<Steps>
+  <Step title="Choose the source">
+    Choose **Paste**, **Upload CSV**, or **Google Sheet**. You can paste rows copied from Sheets or Excel; the file uploader accepts CSV and XLSX. For a Google Sheet, connect the account that can read it and choose the sheet.
+  </Step>
+  <Step title="Check the first row">
+    Confirm whether the first row contains column headings or a driver's details. Don't accept a header guess that treats your first driver's name and number as headings.
+  </Step>
+  <Step title="Match the columns">
+    Map the phone column to **Phone** and the name to **Name**, or map separate first and last names. You can also map email and your workspace's lead fields, keep extra sheet columns, or skip a column.
+
+    Check the preview's actual names and numbers. A column called “Driver name” kept only as an extra sheet column won't fill the lead's name. Phone-only lists are allowed, but the review asks you to acknowledge missing names.
+  </Step>
+  <Step title="Review and import">
+    Review the rows Vocal will add and those it will skip, then confirm the import. If it stops partway through, read the result before trying again; it tells you how many leads were added.
+  </Step>
+</Steps>
+
+One import can read up to 50,000 rows. Split larger files into separate imports. The CRM import is separate from the [Contacts import](/contacts#import-contacts), which has a different limit and destination.
+
+## Give recruiters leads
+
+Owners and Admins import the team's leads into the **Pool**, then hand them out. Recruiters don't see Pool leads until you do.
+
+**Watch: import a sheet and hand it out · 46 seconds**
+
+<video controls playsInline preload="metadata" poster="/videos/crm/hand-out.jpg" aria-label="Import a sheet into the Pool and hand the leads out to recruiters" width="100%">
+  <source src="/videos/crm/hand-out.mp4" type="video/mp4" />
+  <a href="/videos/crm/hand-out.mp4">Watch the hand-out walkthrough</a>.
+</video>
+
+The walkthrough uses example data.
+
+<Steps>
+  <Step title="Open Team">
+    In CRM, open the **Team** tab. **Recruiters** shows each recruiter's lists and open leads.
+  </Step>
+  <Step title="Import into the Pool">
+    Click **Import** and follow the steps above. Everything imported from **Team** lands in the **Pool**.
+  </Step>
+  <Step title="Hand out">
+    In the **Pool**, click **Hand out**. Pick the recruiters, then choose **Split evenly** or **Same number each**. Each recruiter gets one new list that follows the company workflow. Under **Workflow starts**, **Today** puts the first step in their Today right away; **Not yet** holds it, and only replies and promises reach Today until it starts.
+  </Step>
+  <Step title="Confirm and check">
+    Click **Hand out** at the bottom of the dialog. The confirmation shows how many leads each recruiter got and has **Undo**. Open **Recruiters** to see the new counts.
+  </Step>
+</Steps>
+
+To hand out only some leads, select them in the Pool first; the button changes to **Hand out** with the number selected. A driver already on another recruiter's list is skipped and listed under **Review**; choose **Add anyway** to hand that driver out regardless. Do-not-call and opted-out drivers are never handed out.
+
+**Undo** sends untouched leads back to the Pool. Leads a recruiter has already called, texted, or updated stay with that recruiter.
+
+## Why were some rows skipped?
+
+Vocal compares phone numbers after standardizing their format, so spaces, parentheses, or a country-code format don't make a number new.
+
+| Review result | What to do |
+| --- | --- |
+| Repeated number in the file | Keep one row for that number |
+| Invalid number | Correct the source number and import it again |
+| Already in the Pool | Ask your Owner or Admin about handing it out |
+| Already with a recruiter | Check with your Owner or Admin before creating another assignment |
+| Do-not-call or opted-out number | Leave it out; importing again doesn't remove the restriction |
+
+An Owner or Admin can deliberately override an existing recruiter assignment during import. A recruiter importing a personal list can't override that check. A previously worked lead isn't necessarily the same as an active assignment; use the review result rather than assuming all old numbers will be skipped.
+
+## Google Sheets: what syncs?
+
+Importing a Google Sheet into your own list copies it once. The team **Pool** keeps its connected sheet, and an Owner or Admin can refresh it to add numbers Vocal doesn't have yet. A refresh leaves your CRM statuses and notes alone and never writes back to the sheet. Removing a row from the sheet isn't a way to delete it from Vocal.
+
+If someone changed the sheet's headings, choose the sheet again so the columns are matched.
+
+## Rename a list or undo an import
+
+Click **My imports** (on the **Team** tab, **Imports**). Your personal lists have **Rename**, and each import has **Undo import**. The latest 30 imports are listed. Review the confirmation before continuing.
+
+Undo removes only untouched imported leads. Leads with calls, messages, notes, callbacks, manual field edits, or other recorded work stay. Leads already handed out from the Pool stay too. Shared attributes and contact records are kept.
+
+If you imported the wrong columns, undo the untouched rows, correct the file or mapping, and import again. If you've already worked those leads, don't delete their history to fix a name; ask [support](mailto:team@vocal.solutions) for help with the import.
+
+<Note>
+  The imports list includes imports recorded by the current import flow. Older imports may not have a history entry. An interrupted import can appear as partial; check its counts before retrying.
+</Note>
+
+## Delete a lead or get a copy of your leads
+
+Select a lead on your own personal list to use **Delete lead**. Only untouched leads are eligible. You can't use this to delete leads handed to you by someone else. For a lead you've already worked, [stop following up](/crm/privacy-and-stopping#stop-contacting-a-lead) instead.
+
+**Undo import** is for recovering from a mistaken import, not for erasing a worked list. If you need a copy of your leads or help moving your data, contact [support](mailto:team@vocal.solutions).

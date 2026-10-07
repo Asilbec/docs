@@ -1,31 +1,47 @@
 ---
-title: "The workflow editor"
+title: "Steps"
 icon: "diagram-project"
-description: "Design the conversation your agent runs — stages, actions, and outcomes — visually or by describing it to the AI co-pilot."
+description: "Give an agent a call path: steps where it talks, branches on what it learned, transfers, and endings."
 ---
 
-The workflow is your agent's playbook for a call: greet, qualify, collect details, take action, wrap up. You design it on a visual canvas — or skip the canvas and describe what you want in plain English.
+An agent doesn't need steps. Without any, it follows its [instructions](/agent/behavior) for the whole call, which is right for most answering agents. Add steps when a call should move through stages in order: confirm who you're talking to, qualify, then hand off to a recruiter.
 
-## The three building blocks
+Steps live in the agent editor under **Steps**. Add one from the palette on the canvas, or right-click the canvas. Right-click a step and choose **Set as start** to make the call begin there.
 
-- **Stages** — conversation goals the agent works through naturally: *"Find out why they're calling,"* *"Collect name, address, and preferred time."* You define the goal; the agent handles the actual back-and-forth.
-- **Actions** — deterministic steps between stages: check business hours, read keypad input, transfer the call, send a text, call your own systems over HTTP, or branch on a condition. Each action's possible results become branches in the flow.
-- **Endings** — how calls conclude, each labeled with an outcome you define (booked, qualified, not interested, callback requested). Outcomes become the labels on calls in your Inbox, so reporting matches how you think about your business.
+## Kinds of steps
 
-## Global triggers
+**Steps where the agent talks.** Each has **Instructions** in one of two modes: **Prompt** is guidance the agent speaks from ("Ask how many years of OTR experience they have"), and **Static** is said word for word. Turn on **Skip reply** to say the line and move on without waiting for an answer; the step then needs exactly one exit. **Extraction fields** list what the agent should collect here.
 
-Some things should work from *anywhere* in the conversation — "if the caller asks for a human at any point, transfer" or "if they mention canceling, jump to the retention step." Mark a stage as **global** with a plain-language trigger and the agent can jump to it from any point in the call.
+A talking step leaves through its exits. **When the caller…** is judged by the agent from what was said, like "agrees to hear about the role". **When answers…** is checked against the answers collected so far, using the rule builder described below. Each exit has a **Go to** step.
 
-## The AI co-pilot
+**Logic split.** It routes the call on what's already known, with no talking. Its **Branches** are checked top to bottom and the first match wins; each branch is either **When** (with rules) or **Otherwise**. If nothing matches, the call takes the **Else** path.
 
-The chat panel in the editor knows your whole workflow. Describe what you want — *"after they pick a time, text them a confirmation and end the call as booked"* — and it builds or rewires the steps for you. It's the fastest way to make structural changes; fine-tune the details on the canvas afterwards.
+Each rule (**Add rule**) tests one of the agent's **Data** fields or a step's extraction fields, or **Call direction** or **Contact name**. Pick an answer, a test (**is**, **is not**, **contains**, **has a value**, **is empty**, or comparisons for numbers) and a value. With more than one rule, set **Match** to **All** or **Any** of these. A split might send drivers whose `cdl_class` is A to a transfer step and everyone else to a step that takes a message.
 
-Starting fresh? The empty canvas offers templates for common setups (receptionist, lead intake, booking) you can adapt instead of starting from zero.
+**Transfer.** It hands the caller to a person. **Transfer to** takes a **Phone** number, a **Team Member** (when a teammate has a line), or an existing **Ring Group**. You can add a **Message before transfer (TTS)** and set **Wait timeout (seconds)**, from 15 to 300 (120 by default). When someone picks up, the call is theirs. When nobody does, the caller hangs up while waiting, or the transfer fails, the call continues along the path you connect for that case, so point it at a step that takes a message.
 
-## Saving vs. publishing
+**End.** It finishes the call. **Goodbye** is optional; without one the agent says a short goodbye and hangs up.
 
-Workflow edits save to your **draft** (press <kbd>Cmd</kbd>+<kbd>S</kbd> or use the save bar) and are picked up by test calls immediately. Live callers only get changes when you **Publish** the agent — same model as [behavior](/agent/behavior#drafts-publishing-and-testing).
+## Who speaks first
 
-<Tip>
-  Keep it simpler than you think you need. Two or three stages with a clear goal each beats ten hyper-specific ones — the agent is good at conversation; the workflow is there for structure and actions, not to script every sentence.
-</Tip>
+The top of the Steps page has **Who speaks first**. Choose **Agent** to open with the start step, or **Caller** to let them talk first. With **Caller**, you can also set how many seconds of silence (1 to 60) pass before the agent opens anyway.
+
+## Saving, issues and testing
+
+Press <kbd>Cmd</kbd>+<kbd>S</kbd> (<kbd>Ctrl</kbd>+<kbd>S</kbd> on Windows) or click **Save** in the **Unsaved changes** bar. Save won't accept an exit that doesn't lead anywhere; it opens the exit so you can pick a step.
+
+The header also checks the path and shows **No issues** or a count, like **2 issues**. Click it to see each problem and jump to the step. You can save with issues, but **Publish** stays disabled until they're fixed.
+
+**Preview** runs the saved steps in your browser, and the step the call is on lights up on the canvas as you talk. If you have unsaved changes, Preview saves them first.
+
+<Warning>
+  Steps don't wait for **Publish** today. Once you save (or start a Preview, which saves), live calls to the agent's number use the new steps, and rolling back to an older version doesn't restore them. For a big rework, build the new path on a separate agent with no phone number, test it with **Preview**, then move the number to that agent in its **Profile**.
+</Warning>
+
+## Outcomes
+
+End steps don't set an outcome. Define outcomes in the agent's **Outcomes** section, grouped as **Success**, **Neutral** and **Failed**. After each call, AI picks the one that fits best, or **Other** when none does. The results feed the agent's **Overview** and [campaign](/campaigns/outbound) results.
+
+## The AI Helper
+
+The **AI** button in the editor opens **AI Helper**, which takes requests in plain English ("add a step that confirms the driver's CDL class before the transfer") and can edit steps, rules, outcomes and data fields. It applies each change the moment it makes it, with no review. Rule and instruction changes still wait for **Publish**, but its step changes reach live calls right away, so check what it did and try it in **Preview**.

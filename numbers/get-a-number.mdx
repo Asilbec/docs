@@ -1,31 +1,55 @@
 ---
 title: "Get a phone number"
+description: "Add a local or toll-free number, choose who it rings, and release numbers you no longer need."
 icon: "phone"
-description: "Add local or toll-free numbers to your workspace — they're answered by your AI agent instantly."
 ---
 
-Every Vocal number is live the moment you add it: calls are answered by your AI agent, and the number can text once [SMS registration](/numbers/sms-registration) is approved.
+Owners and Admins manage numbers in **Settings → Numbers**. A new number rings the people on it and sends missed calls to voicemail.
 
 ## Add a number
 
-1. Open **Settings → Numbers**.
-2. Click to add a number and search — by area code for a local number, or browse toll-free options.
-3. Confirm. The number is provisioned instantly and starts answering with your agent.
+<Steps>
+  <Step title="Open Settings → Numbers">
+    Click **Add a new number**.
+  </Step>
+  <Step title="Search">
+    Type an area code (412 for a Pittsburgh recruiting line, say), a toll-free prefix such as 800 or 888, or a few digits you'd like the number to contain. Each result shows whether it's local or toll-free and where it's from.
+  </Step>
+  <Step title="Click Buy">
+    If your plan still has an included number free, the number is added right away. Otherwise it's a paid number, which only the workspace Owner can add, through checkout.
+  </Step>
+</Steps>
 
-## What numbers cost
+Every member on a paid plan comes with one included number; extra numbers are priced on [Plans and billing](/billing/plans). Numbers also get added a few other ways:
 
-- **Each member on a paid plan includes one phone number** — most small teams never pay separately for numbers.
-- Beyond your included allowance: **local numbers are $5/month**, **toll-free are $8/month**.
+- A teammate who joined without picking a number sees **Pick my number** on the home page and can claim the one their seat includes.
+- Under **Teammates without a number** in **Settings → Numbers**, Owners and Admins can click **Assign a number** for that person.
+- Group managers can click **Add number** on their group in **Settings → Groups**, and they see the price before confirming. See [Groups](/team/groups).
 
-## Choosing local vs. toll-free
+## What happens when someone calls
 
-- **Local** — a familiar area code builds trust with nearby customers and gets answered more on outbound calls. The right default for most local businesses.
-- **Toll-free** — looks national and keeps one number as you expand. Common for support lines.
+Every new number starts on its **Default call flow**. It rings everyone on the number's **Users** tab for 20 seconds, then sends the caller to voicemail. The person who added the number is its first user, and a number with nobody on it goes straight to voicemail.
 
-## Decide what answers it
+To change who rings or when voicemail picks up, see [Call flows](/calls/call-flows).
 
-Each number has a [call flow](/calls/call-flows) that controls what happens when someone calls — straight to your AI agent (the default), business-hours branching, a menu, or ringing your team first. Texting conversations for the number appear in **Messages**.
+## Texting
+
+Local numbers can text US contacts once your business finishes [SMS registration](/numbers/sms-registration). Pick a local number for any line your recruiters or dispatchers text from. Texts show up in **Inbox** under **Chats**.
+
+## Number settings
+
+Click a number in the list to open it. You'll see up to three tabs:
+
+- **General** has the number's name and emoji (so "Dallas recruiting" is easy to spot), a default ringtone for teammates who haven't picked their own, and **Carrier health**. Health reads Healthy, Degraded, Critical, or Unknown, based on how recent calls on the number went.
+- **Users** lists who the number rings. Everyone here rings at once and the first to answer takes the call. They can also see the number's calls and texts. See [Ringing your team](/calls/ringing-your-team).
+- **Call flow** shows the live flow and any others, with **Edit call flow**, **New flow**, and hold music.
+
+## Release a number
+
+At the bottom of the **General** tab, click **Release** and confirm. The number keeps working, and keeps billing, for 30 days. It shows **Grace period** in the list, and you can click **Keep this number** any time before then.
+
+After 30 days the number is disconnected and goes back to the carrier, so you almost certainly won't get it back. Its call flow and users are cleared; past calls and texts stay. Numbers you transferred in can't be released here, so email [team@vocal.solutions](mailto:team@vocal.solutions) for those.
 
 <Tip>
-  Keeping your existing business number? [Port it in](/numbers/porting) — or forward it to your Vocal number as a zero-risk first step.
+  Moving numbers over from RingCentral? See [Transfer your numbers to Vocal](/numbers/porting).
 </Tip>

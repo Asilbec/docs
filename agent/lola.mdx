@@ -1,0 +1,50 @@
+---
+title: "Let AI answer a number"
+description: "Turn on Lola, Vocal's AI answering, so a number's missed calls get answered and a message taken instead of going to voicemail."
+icon: "headset"
+---
+
+AI answering is off until you turn it on. A number you add to Vocal rings the people on it for 20 seconds, then sends the caller to voicemail; that's the number's **Default call flow**. If you'd rather have an AI agent pick up the calls your team misses, an Owner or Admin switches it on for that number.
+
+Every workspace starts with an AI agent called Lola, who picks up for your team and takes a message when she can't help. You can rename her in **AI Agents**.
+
+## Set up Lola for a number
+
+<Steps>
+  <Step title="Open the number">
+    Click **Lola** in the sidebar. Under **Inboxes**, find the number and click **Set up**. If the workspace has no numbers yet, **Add a phone number** takes you to [get one](/numbers/get-a-number).
+  </Step>
+  <Step title="Choose which calls she answers">
+    The one option today is **Answer missed calls**: Lola only answers when nobody on your team does. For anything else, follow the **Call flow builder** link and build it yourself.
+  </Step>
+  <Step title="Decide how she handles calls">
+    - **Greeting** is the first thing she says. Say who's answering and end on a question, like "Thanks for calling Northline recruiting, this is Lola. How can I help?"
+    - **Take a message** tells her when and how to take one. The default has her get the caller's name and what it's about, check the callback number, and read the message back.
+    - **Personality** sets her **Voice** and **Tone**: **Formal**, **Neutral**, or **Casual**.
+  </Step>
+  <Step title="Add knowledge and activate">
+    Give her facts to answer from. Paste a web page address and click **Import** (Vocal reads that one page), or use **Upload file** or **Add page**. Click **Test Lola** to talk to her in your browser first; the number's routing doesn't change until you click **Activate Lola**.
+  </Step>
+</Steps>
+
+Activating saves a copy of Lola just for this number and a new call flow that rings your team for 30 seconds before she takes the call. Your old call flow is kept, so you can switch back from the number's **Call flow** tab. On the Lola page the number now shows **Active**; **Manage** opens its call flow.
+
+## Or turn on the ready-made flow
+
+Numbers usually come with a second, inactive flow named after your default agent, most often **Lola flow**. It rings the number's people for 20 seconds and hands missed calls to that agent, using the agent's shared settings rather than a per-number greeting. If a number doesn't have one, use Lola setup instead.
+
+To use it, go to **Settings** › **Numbers**, open the number, and pick the **Call flow** tab. Click **Set live** next to **Lola flow**. To undo it, click **Set live** on **Default call flow**. [Call flows](/calls/call-flows) covers building your own.
+
+<Warning>
+  An agent's **Profile** also has a **Phone number** field. Choosing a number there routes that number to the agent, so the AI answers every call and your team doesn't ring. Only use it for a number meant for AI.
+</Warning>
+
+## What happens on a call
+
+Lola greets the caller and answers from her knowledge when she can. When the caller wants someone who can't pick up, asks something she doesn't know, or needs something she can't do, she takes a message: a name (asked for once), what it's about, and a check that the number they're calling from is the best one to call back. She doesn't transfer calls or book appointments, and her rules tell her not to promise either.
+
+Afterward the call shows up in the number's call history (**View calls** on the Lola page) and in the caller's conversation in [Inbox](/inbox) for anyone who can see that number. It carries a transcript, an AI summary, and the details she collected: the caller's name, the reason for the call, and the callback number. Each call also gets an outcome; Lola's defaults are **Handled**, **Message taken**, and **No answer**, so a recruiter going through the morning's missed calls can tell which drivers are waiting on a callback.
+
+## Who can turn it on
+
+Only Owners and Admins see **Lola** in the sidebar and can set up or change AI answering. Members still see Lola's calls on the numbers they have access to ([Members and roles](/team/members-and-roles)).
