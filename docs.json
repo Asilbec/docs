@@ -18,8 +18,8 @@
     "default": "light"
   },
   "favicon": {
-    "light": "/images/mark-white.svg",
-    "dark": "/images/mark-black.svg"
+    "light": "/images/mark-black.svg",
+    "dark": "/images/mark-white.svg"
   },
   "logo": {
     "light": "/images/mark-black.svg",
