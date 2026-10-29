@@ -18,12 +18,12 @@
     "default": "light"
   },
   "favicon": {
-    "light": "/images/icon.svg",
-    "dark": "/images/vocal-mark.svg"
+    "light": "/images/mark-white.svg",
+    "dark": "/images/mark-black.svg"
   },
   "logo": {
-    "light": "/images/avatar-512-black.png",
-    "dark": "/images/avatar-512-white.png",
+    "light": "/images/mark-black.svg",
+    "dark": "/images/mark-white.svg",
     "href": "https://support.vocal.solutions"
   },
   "fonts": {
