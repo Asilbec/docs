@@ -17,10 +17,13 @@
   "appearance": {
     "default": "light"
   },
-  "favicon": "/favicon.svg",
+  "favicon": {
+    "light": "/images/icon.svg",
+    "dark": "/images/vocal-mark.svg"
+  },
   "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg",
+    "light": "/images/avatar-512-black.png",
+    "dark": "/images/avatar-512-white.png",
     "href": "https://support.vocal.solutions"
   },
   "fonts": {
