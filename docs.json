@@ -171,5 +171,8 @@
       "cursor",
       "vscode"
     ]
+  },
+  "seo": {
+    "indexing": "all"
   }
 }
