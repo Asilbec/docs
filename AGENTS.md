@@ -51,4 +51,4 @@ Vocal is an AI-native business phone that connects information scattered across 
 
 ## Design — Clear Signal
 
-White and black, generous whitespace, Inter, black pill CTAs, and one restrained blue (`#1A6EFF`, `#3D85FF` in dark mode) for links and selection. The logo is the woven orb with the "Vocal" wordmark (`logo/`). The retired lime `#E5FF2D`, Geist, and the sound-wave mark must not come back. Full rules: `SelfServe/DESIGN.md`.
+White and black, generous whitespace, Inter, black pill CTAs, and one restrained blue (`#1A6EFF`, `#3D85FF` in dark mode) for links and selection. The logo is the linked hexagon mark (`images/mark-black.svg`, `images/mark-white.svg`). The retired lime `#E5FF2D`, Geist, and the sound-wave mark must not come back. Full rules: `SelfServe/DESIGN.md`.

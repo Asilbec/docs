@@ -1,6 +1,6 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "mint",
+  "theme": "aspen",
   "name": "Vocal",
   "description": "Help for Vocal, the AI-native business phone: calls, texts, numbers, CRM, Iris, and billing.",
   "colors": {
@@ -31,6 +31,17 @@
   },
   "styling": {
     "eyebrows": "breadcrumbs"
+  },
+  "thumbnails": {
+    "preset": "headline",
+    "appearance": "dark",
+    "surface": "neutral",
+    "fonts": {
+      "family": "Inter"
+    },
+    "eyebrow": {
+      "color": "#4A78A8"
+    }
   },
   "navigation": {
     "groups": [

@@ -3,6 +3,7 @@
    in docs.json. Headings use regular/medium Inter, so hierarchy comes from
    size and spacing, not bold. */
 
+/* Aspen paints the button on the link's first span. */
 #topbar-cta-button a > span:first-child {
   background: #080808;
   border-radius: 999px;
@@ -20,6 +21,16 @@ html.dark #topbar-cta-button a > span:first-child {
 html.dark #topbar-cta-button a span.text-white,
 html.dark #topbar-cta-button a svg {
   color: #080808;
+}
+
+/* Sentence case for sidebar groups ("Calls and texts"), and no
+   mid-word hyphens in long page names. */
+.sidebar-group-header {
+  text-transform: none;
+}
+
+li[id^="/"] a .hyphens-auto {
+  hyphens: manual;
 }
 
 #page-title {
